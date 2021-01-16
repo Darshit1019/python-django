@@ -1,0 +1,37 @@
+{%  extends 'main.html' %}
+{% load static %}
+
+{% block csslink %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'E_R.css' %}">
+
+{% endblock %} 
+
+
+{% block content %}
+
+<div class="box">
+    <form  action="" method="POST">
+        {% csrf_token %}
+        <h1>Event Registration</h1>  
+        <br>
+        <br>
+            {{event.event_name}} 
+            {{event.description}}
+            {{event.location}} 
+            <div>
+                <label for="datetime_input_from" style="color: white;">From</label>
+                {{event.starting_date}} 
+                <label for="datetime_input_to" style="color: white;">To</label>
+                {{event.ending_date}}
+            </div>
+            <label for="datetime_input_regdeadline" style="color: white;">Registartion Deadline</label>
+            {{event.registration_deadline}}
+            {{event.host_email}}
+            {{event.host_password}}
+            <br>
+        <input id="btn" type="submit" value="Submit" name="Submit">
+    </form>
+</div>
+	
+{% endblock %}

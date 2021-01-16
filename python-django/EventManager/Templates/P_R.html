@@ -1,0 +1,71 @@
+{%  extends 'main.html' %}
+{% load static %}
+
+{% block csslink %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'P_R.css' %}">
+
+{% endblock %} 
+
+
+{% block content %}
+
+<div class="box1">
+    <h1>Registrations are open for the following events:</h1>
+    <br>
+    <br>
+    {% for event in registered_event %}
+    <label for="event_name_input" style="color: black; font-weight: bold;">Event Name: </label>
+        {{event.event_name}}
+    <br>
+    <br>
+    <label for="description_input" style="color: black; font-weight: bold;">Discription: </label>
+        {{event.description}}
+    <br>
+    <label for="datetime_input_from" style="color: black; font-weight: bold;">Starts at: </label>
+        {{event.starting_date}}
+    <br>
+    <label for="datetime_input_to" style="color: black; font-weight: bold;">Ends at: </label>
+        {{event.ending_date}}
+    <br>
+    <label for="datetime_input_regdeadline" style="color: black; font-weight: bold;">Registration ends at: </label>
+        {{event.registration_deadline}}
+    <br>
+    <label for="location_input" style="color: black; font-weight: bold;">Venue: </label>
+        {{event.location}}
+    <br>
+    <hr style="border: 0.5px solid #ccc;">
+{% endfor %}
+</div>
+
+
+<div class="box2">
+    <form method="POST" action="">
+        {% csrf_token %}
+        <h1>Participant Registration</h1>
+        <br>
+        <br>
+        {{participant.participant_name}}
+        {{participant.contact_no}}
+        {{participant.participant_email}}
+        <div class="checkboxes_main">
+            {% for checkbox in participant.events %}
+            <div class="checkboxes">
+                <label>{{checkbox}}</label> 
+            </div> 
+            {% endfor %} 
+        </div>
+        <div class="radio_main">
+            {% for radio in participant.participation_type %}
+            <div class="radios">
+                <label>{{radio}}</label> 
+            </div> 
+            {% endfor %} 
+        </div>
+            {{participant.numberof_participant}}
+        <br>
+        <input id="btn" type="submit" value="Submit" name="Submit">
+    </form>
+</div>
+
+{% endblock %}

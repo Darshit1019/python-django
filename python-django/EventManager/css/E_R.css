@@ -1,0 +1,118 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+     background-color:#2b435a; 
+}
+
+.box{
+    width: 1200px;
+    height: 700px;
+    padding: 40px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color:black;
+    position: absolute; 
+    margin-left: 125px;
+    text-align: center;
+}
+
+.box h1{
+    color: #7ff3fc;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+.box input[type ="text"], input[type ="textarea"], input[type ="email"], input[type ="password"] {
+    background: none;
+    text-decoration: none;
+    display: block;
+    margin: 10px auto;
+    text-align: center;
+    border:2px solid #3498db;
+    width: 200px;
+    padding: 14px 10px;
+    outline:none;
+    color: white;
+    border-radius: 24px;
+    transition: 0.25s;
+}
+
+.box input[type ="text"]:hover, input[type ="textarea"]:hover, input[type ="email"]:hover, input[type ="password"]:hover{
+    width:400px;
+    margin: 1px auto;
+    border-color: #2ecc71;
+}
+
+.description_input{
+    background: none;
+    text-decoration: none;
+    display: block;
+    margin: 10px auto;
+    text-align: center;
+    border:2px solid #3498db;
+    width: 400px;
+    height: 60px;
+    padding: 14px 10px;
+    outline:none;
+    color: white;
+    border-radius: 24px;
+    transition: 0.25s;
+}
+
+.description_input:hover{
+    width:600px;
+    margin: 1px auto;
+    border-color: #2ecc71;
+}
+
+.datetime_input_from, .datetime_input_to, .datetime_input_regdeadline{
+    background: none;
+    color: white;
+    text-decoration: none;
+    margin: 10px auto;
+    text-align: center;
+    border:2px solid #3498db;
+    width: 200px;
+    padding: 14px 10px;
+    outline:none;
+    border-radius: 24px;
+    transition: 0.25s;
+}
+
+.datetime_input_from:hover, .datetime_input_to:hover, .datetime_input_regdeadline:hover{
+    width:400px;
+    margin: 1px auto;
+    border-color: #2ecc71;
+}
+
+.box input[type ="submit"] {
+    background: none;
+    text-decoration: none;
+    display: block;
+    margin: 10px auto;
+    text-align: center;
+    border:2px solid #2ecc71;
+    width: 150px;
+    padding: 14px 10px;
+    outline:none;
+    color: white;
+    border-radius: 24px;
+    transition: 0.25s;
+}
+
+.box input[type ="submit"]:hover {
+    background: #2ecc71;
+}
+
+::-webkit-calendar-picker-indicator {
+    filter: invert(0.5);
+}
+
+::-webkit-calendar-picker-indicator:hover {
+    filter: invert(1);
+}
+
+::placeholder{
+    color: rgb(185, 182, 182);
+}

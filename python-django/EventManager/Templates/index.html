@@ -1,0 +1,21 @@
+{%  extends 'main.html' %}
+{% load static %}
+
+{% block csslink %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'index.css' %}">
+
+{% endblock %}
+
+
+{% block content %}
+
+<div class="box_index">
+	<h1>Event Manager</h1>
+	<br>
+	<a class="txt" href="{% url 'event_registration' %}">Event Registartion</a>
+	<a class="txt" href="{% url 'participant_registration' %}">Participant Registartion</a>
+	<a class="txt" href="">Event Dashboard</a> 
+</div>
+	
+{% endblock %}
